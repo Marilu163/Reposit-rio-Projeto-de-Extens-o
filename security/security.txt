@@ -1,2 +1,2 @@
-Contact: mailto:contato@exemplo.com
-Policy: https://github.com/seu-usuario/seu-repo
+Contact: mailto:contatom@exemplo.com
+Policy: https://marilu163.github.io/Reposit-rio-Projeto-de-Extens-o/

@@ -1,29 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAUS - Centro de Ação Sustentável</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Bem-vindo ao meu site</h1>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="pages/sobre.html">Sobre</a> |
-      <a href="pages/contato.html">Contato</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CAUS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fa fa-bars" style="color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id="menu-dinamico">
+                    </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <p>Site criado com segurança usando GitHub Pages.</p>
-  </main>
+    <header class="hero" id="inicio">
+        <div class="container">
+            <h1 id="titulo-principal"></h1>
+            <p id="subtitulo-principal"></p>
+            <a href="pages/contato.html" class="btn-custom">Entre em Contato</a>
+        </div>
+    </header>
 
-  <!-- JS -->
-  <script src="assets/js/main.js"></script>
+    <section id="projetos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Projetos</h2>
+                <p>Iniciativas para transformação socioambiental.</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fa fa-leaf fa-3x text-success mb-3"></i>
+                    <h4>Reflorestamento</h4>
+                    <p>Ações de recuperação de mata ciliar nas bacias hidrográficas.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-map-marked-alt fa-3x text-success mb-3"></i>
+                    <h4>Mapeamento</h4>
+                    <p>Atlas digital interativo com dados históricos da região.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-users fa-3x text-success mb-3"></i>
+                    <h4>Educação</h4>
+                    <p>Oficinas e palestras em escolas e comunidades locais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regiao" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="titulo-regiao"></h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://sites.usp.br/atlassanca/wp-content/uploads/sites/1307/2023/11/Capa-2-1.png" class="img-fluid rounded shadow" alt="Mapa da Região">
+                </div>
+                <div class="col-md-6">
+                    <p>Este espaço é destinado para descrever a bacia hidrográfica ou a região foco do projeto.</p>
+                    <p>Você pode alterar este texto diretamente no código HTML na seção "regiao".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
