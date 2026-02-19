@@ -1,0 +1,2 @@
+Contact: mailto:contato@exemplo.com
+Policy: https://github.com/seu-usuario/seu-repo
