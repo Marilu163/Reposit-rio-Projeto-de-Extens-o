@@ -206,3 +206,48 @@ section {
     transform: scale(1.05);
     box-shadow: 0 0 40px rgba(0, 242, 96, 0.8);
 }
+/* --- EFEITO DE VARREDURA/SCANNER GLOBAL --- */
+
+.tech-scanner {
+    /* Fixa a camada na tela inteira, por cima de tudo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; /* Garante que fique no topo */
+    
+    /* ESSENCIAL: Permite clicar através da camada */
+    pointer-events: none;
+    
+    /* O Feixe de Luz (Gradiente) */
+    /* Usamos cores transparentes nas pontas e neon no meio */
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 242, 96, 0.1) 40%,  /* Verde neon bem suave */
+        rgba(0, 242, 255, 0.4) 50%,  /* Azul ciano brilhante no centro */
+        rgba(0, 242, 96, 0.1) 60%,  /* Verde neon bem suave */
+        transparent 100%
+    );
+    
+    /* Faz o fundo ser muito mais alto que a tela para poder se mover */
+    background-size: 100% 300%;
+    background-position: 0 -100%; /* Começa escondido lá em cima */
+    
+    /* Aplica a animação */
+    animation: scanner-sweep 7s linear infinite;
+    
+    /* Um leve efeito de mistura para "acender" o que está embaixo */
+    mix-blend-mode: screen;
+}
+
+/* A Animação que move o feixe de cima para baixo */
+@keyframes scanner-sweep {
+    0% {
+        background-position: 0 -150%; /* Começa acima da tela */
+    }
+    100% {
+        background-position: 0 250%; /* Termina bem abaixo da tela */
+    }
+}
