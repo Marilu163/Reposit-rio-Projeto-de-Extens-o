@@ -48,26 +48,30 @@ if (menuContainer) {
         const li = document.createElement('li');
         li.className = 'nav-item';
 
+        // Lógica para aplicar o caminhoBase corretamente
+        const linkPrincipal = item.link.startsWith('#') ? item.link : (caminhoBase + item.link);
+
         if (item.dropdown) {
             li.className += ' dropdown';
             const textoMenu = item.texto === "Região" ? configSite.nomeRegiao : item.texto;
 
             let htmlDropdown = `
-                <a class="nav-link dropdown-toggle" href="${item.link}" role="button" data-bs-toggle="dropdown">
+                <a class="nav-link dropdown-toggle" href="${linkPrincipal}" role="button" data-bs-toggle="dropdown">
                     ${textoMenu}
                 </a>
                 <ul class="dropdown-menu">
             `;
             
             item.dropdown.forEach(subItem => {
-                htmlDropdown += `<li><a class="dropdown-item" href="${subItem.link}">${subItem.texto}</a></li>`;
+                const linkSub = subItem.link.startsWith('#') ? subItem.link : (caminhoBase + subItem.link);
+                htmlDropdown += `<li><a class="dropdown-item" href="${linkSub}">${subItem.texto}</a></li>`;
             });
 
             htmlDropdown += `</ul>`;
             li.innerHTML = htmlDropdown;
 
         } else {
-            li.innerHTML = `<a class="nav-link" href="${item.link}">${item.texto}</a>`;
+            li.innerHTML = `<a class="nav-link" href="${linkPrincipal}">${item.texto}</a>`;
         }
 
         menuContainer.appendChild(li);
