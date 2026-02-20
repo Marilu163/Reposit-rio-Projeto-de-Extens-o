@@ -7,24 +7,25 @@ const caminhoBase = isPaginaInterna ? '../' : '';
  */
 const configSite = {
     tituloHero: "Bem-vindo ao CAUS",
-    subtituloHero: "Atlas histórico e socioambiental das regiões hidrográficas.",
-    nomeRegiao: "Bacia do Monjolinho", 
+    subtituloHero: "Atlas histórico e socioambiental de Apucarana.",
+    nomeRegiao: "Apucarana", 
 
-    // LISTA DE ABAS COM CAMINHO INTELIGENTE
     menu: [
-        { texto: "Início", link: caminhoBase + "index.html" },
+        { texto: "Início", link: "index.html" },
         { 
-            texto: "Região", 
-            link: caminhoBase + "index.html#regiao",
+            texto: "Apucarana", 
+            link: "#regiao",
             dropdown: [
                 { texto: "Linha Histórica", link: "#" },
                 { texto: "Dados Hidrográficos", link: "#" },
                 { texto: "Mapas", link: "#" }
             ]
         },
-        { texto: "Projetos", link: caminhoBase + "index.html#projetos" },
-        { texto: "Sobre o CAUS", link: caminhoBase + "pages/sobre.html" },
-        { texto: "Contato", link: caminhoBase + "pages/contato.html" }
+        { texto: "Projetos", link: "#projetos" },
+        { texto: "Materiais", link: "#" },
+        { texto: "Equipes e parcerias", link: "#" },
+        { texto: "Sobre o CAUS", link: "#" },
+        { texto: "Contato", link: "pages/contato.html" }
     ]
 };
 
