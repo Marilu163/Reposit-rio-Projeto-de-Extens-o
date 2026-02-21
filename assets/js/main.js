@@ -21,9 +21,14 @@ const configSite = {
                 { texto: "Mapas", link: "#" }
             ]
         },
+<<<<<<< HEAD
         { texto: "Projetos", link: "#projetos" },
         // AJUSTE AQUI: Apontando para a pasta pages
         { texto: "Materiais", link: "pages/materiais.html" }, 
+=======
+        { texto: "Projetos", link: "pages/projetos.html" }, // Use a barra / e não \
+        { texto: "Materiais", link: "#" },
+>>>>>>> tela-projetos
         { texto: "Equipes e parcerias", link: "pages/equipe.html" },
         { texto: "Sobre o CAUS", link: "pages/sobre.html" },
         { texto: "Contato", link: "pages/contato.html" }
