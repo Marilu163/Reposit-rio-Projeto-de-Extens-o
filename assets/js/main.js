@@ -22,13 +22,13 @@ const configSite = {
             ]
         },
         { texto: "Projetos", link: "#projetos" },
-        { texto: "Materiais", link: "#" },
+        // AJUSTE AQUI: Apontando para a pasta pages
+        { texto: "Materiais", link: "pages/materiais.html" }, 
         { texto: "Equipes e parcerias", link: "pages/equipe.html" },
-        { texto: "Sobre o CAUS", link: "#" },
+        { texto: "Sobre o CAUS", link: "pages/sobre.html" },
         { texto: "Contato", link: "pages/contato.html" }
     ]
 };
-
 // ... O restante do código de desenho do menu continua igual daqui para baixo ...
 // 1. Atualiza Textos Iniciais (somente se estiver na página inicial)
 const tituloPrincipal = document.getElementById('titulo-principal');
