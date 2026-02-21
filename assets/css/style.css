@@ -251,3 +251,39 @@ section {
         background-position: 0 250%; /* Termina bem abaixo da tela */
     }
 }
+/* --- ESTILO EQUIPE (MODELO ATLAS) --- */
+.equipe-container {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.membro-card {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+.membro-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.membro-nome {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.membro-bio {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+}
