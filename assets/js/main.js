@@ -21,7 +21,7 @@ const configSite = {
                 { texto: "Mapas", link: "#" }
             ]
         },
-        { texto: "Projetos", link: "#projetos" },
+        { texto: "Projetos", link: "pages/projetos.html" }, // Use a barra / e não \
         { texto: "Materiais", link: "#" },
         { texto: "Equipes e parcerias", link: "pages/equipe.html" },
         { texto: "Sobre o CAUS", link: "#" },
