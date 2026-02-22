@@ -18,8 +18,7 @@ const configSite = {
             dropdown: [
                 { texto: "Linha Histórica", link: "#" },
                 { texto: "Dados Hidrográficos", link: "#" },
-                { texto: "Mapas", link: "#" }
-            ]
+                { texto: "Mapas", link: "#" }]
         },    
         // AJUSTE AQUI: Apontando para a pasta pages
         { texto: "Materiais", link: "pages/materiais.html" }, 
