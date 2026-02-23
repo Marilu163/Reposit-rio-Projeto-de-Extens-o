@@ -114,7 +114,7 @@
             
             <div class="row">
                 <div class="col-12 text-end">
-                    <button type="submit" class="btn btn-lg px-5 py-3 shadow" style="background-color: #58d89f; color: white; font-weight: 700; border-radius: 8px; letter-spacing: 1px;">
+                    <button type="submit" class="btn btn-lg px-5 py-3 shadow" style="background-color: #e39e4f; color: white; font-weight: 700; border-radius: 8px; letter-spacing: 1px;">
                         <i class="fa fa-paper-plane me-2"></i> ENVIAR MENSAGEM
                     </button>
                 </div>
@@ -219,5 +219,25 @@
             "retina_detect": true
         });
     </script>
+<script>
+const hero = document.querySelector(".hero");
+
+hero.addEventListener("click", function(e) {
+    
+    const gota = document.createElement("div");
+    gota.classList.add("gota");
+
+    // Ajusta posição relativa ao hero
+    const rect = hero.getBoundingClientRect();
+    gota.style.left = (e.clientX - rect.left) + "px";
+    gota.style.top = (e.clientY - rect.top) + "px";
+
+    hero.appendChild(gota);
+
+    setTimeout(() => {
+        gota.remove();
+    }, 800);
+});
+</script>
 </body>
 </html>

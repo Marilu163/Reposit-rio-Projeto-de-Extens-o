@@ -319,3 +319,41 @@ section {
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
+/* --- EFEITO GOTAS AO CLICAR --- */
+
+.gota {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: gotaAnim 0.8s ease-out forwards;
+    z-index: 9998;
+    
+    background: radial-gradient(circle, 
+        rgba(0,242,255,0.9) 0%, 
+        rgba(0,242,96,0.6) 40%, 
+        rgba(0,242,255,0.2) 70%, 
+        transparent 100%);
+    
+    box-shadow: 
+        0 0 10px rgba(0,242,255,0.8),
+        0 0 25px rgba(0,242,96,0.6);
+}
+
+/* Animação da gota */
+@keyframes gotaAnim {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    70% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(3);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(5);
+    }
+}
