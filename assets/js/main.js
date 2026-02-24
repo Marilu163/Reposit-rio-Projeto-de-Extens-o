@@ -16,7 +16,6 @@ const configSite = {
             texto: "Apucarana", 
             link: "#regiao",
             dropdown: [
-                { texto: "Apucarana", link: "pages/Apucarana.html" },
                 { texto: "Linha Histórica", link: "pages/linha-historica.html" },
                 { texto: "Dados Hidrográficos", link: "pages/dados-hidrograficos.html" },
                 { texto: "Mapas", link: "pages/mapas.html" }]
