@@ -12,13 +12,13 @@ const configSite = {
 
     menu: [
         { texto: "Início", link: "index.html" },
-        { 
+{ 
             texto: "Apucarana", 
             link: "#regiao",
             dropdown: [
-                { texto: "Linha Histórica", link: "#" },
-                { texto: "Dados Hidrográficos", link: "#" },
-                { texto: "Mapas", link: "#" }]
+                { texto: "Linha Histórica", link: "pages/linha-historica.html" },
+                { texto: "Dados Hidrográficos", link: "pages/dados-hidrograficos.html" },
+                { texto: "Mapas", link: "pages/mapas.html" }]
         },    
         // AJUSTE AQUI: Apontando para a pasta pages
         { texto: "Materiais", link: "pages/materiais.html" }, 
