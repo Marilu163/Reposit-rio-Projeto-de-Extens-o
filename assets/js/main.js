@@ -23,7 +23,7 @@ const configSite = {
         },    
         { texto: "Materiais", link: "pages/materiais.html" }, 
         { texto: "Projetos", link: "pages/projetos.html" }, 
-        { texto: "Equipe", link: "pages/equipe.html" },
+        { texto: "Equipe e parcerias", link: "pages/equipe.html" },
         { texto: "Sobre", link: "pages/sobre.html" },
         { texto: "Contato", link: "pages/contato.html" }
     ]
