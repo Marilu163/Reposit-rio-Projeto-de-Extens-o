@@ -12,23 +12,23 @@ const configSite = {
 
     menu: [
         { texto: "Início", link: "index.html" },
-{ 
+        { 
             texto: "Apucarana", 
-            link: "#regiao",
+            link: "pages/apucarana.html", 
             dropdown: [
                 { texto: "Linha Histórica", link: "pages/linha-historica.html" },
                 { texto: "Dados Hidrográficos", link: "pages/dados-hidrograficos.html" },
-                { texto: "Mapas", link: "pages/mapas.html" }]
+                { texto: "Mapas", link: "pages/mapas.html" }
+            ]
         },    
-        // AJUSTE AQUI: Apontando para a pasta pages
         { texto: "Materiais", link: "pages/materiais.html" }, 
-        { texto: "Projetos", link: "pages/projetos.html" }, // Use a barra / e não \
-        { texto: "Equipes e parcerias", link: "pages/equipe.html" },
-        { texto: "Sobre o CAUS", link: "pages/sobre.html" },
+        { texto: "Projetos", link: "pages/projetos.html" }, 
+        { texto: "Equipe", link: "pages/equipe.html" },
+        { texto: "Sobre", link: "pages/sobre.html" },
         { texto: "Contato", link: "pages/contato.html" }
     ]
-};
-// ... O restante do código de desenho do menu continua igual daqui para baixo ...
+}; // <--- ADICIONE ESTA CHAVE E O PONTO E VÍRGULA AQUI!
+
 // 1. Atualiza Textos Iniciais (somente se estiver na página inicial)
 const tituloPrincipal = document.getElementById('titulo-principal');
 const subtituloPrincipal = document.getElementById('subtitulo-principal');
@@ -43,20 +43,21 @@ const menuItens = configSite.menu;
 const menuContainer = document.getElementById('menu-dinamico');
 
 if (menuContainer) {
+    // Dica: Adicione esta linha abaixo para limpar o menu antes de desenhar
+    menuContainer.innerHTML = ''; 
+
     menuItens.forEach(item => {
         const li = document.createElement('li');
         li.className = 'nav-item';
 
-        // Lógica para aplicar o caminhoBase corretamente
         const linkPrincipal = item.link.startsWith('#') ? item.link : (caminhoBase + item.link);
 
         if (item.dropdown) {
             li.className += ' dropdown';
-            const textoMenu = item.texto === "Região" ? configSite.nomeRegiao : item.texto;
-
+            // Note que mudei para item.texto para garantir que apareça "Apucarana"
             let htmlDropdown = `
                 <a class="nav-link dropdown-toggle" href="${linkPrincipal}" role="button" data-bs-toggle="dropdown">
-                    ${textoMenu}
+                    ${item.texto}
                 </a>
                 <ul class="dropdown-menu">
             `;
