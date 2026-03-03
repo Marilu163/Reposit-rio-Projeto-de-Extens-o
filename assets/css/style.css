@@ -357,3 +357,148 @@ section {
         transform: translate(-50%, -50%) scale(5);
     }
 }
+/* --- ESTILO DA LINHA DO TEMPO HISTÓRICA --- */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* A linha central vertical */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Contêiner de cada evento */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* O Círculo na linha do tempo */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #fff;
+    border: 4px solid var(--accent-color);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Alinhamento Lado Esquerdo */
+.left {
+    left: 0;
+}
+
+/* Alinhamento Lado Direito */
+.right {
+    left: 50%;
+}
+
+/* Ajusta a posição do círculo para o lado direito */
+.right::after {
+    left: -10px;
+}
+
+/* Caixa de Conteúdo (Cards) */
+.timeline-content {
+    padding: 25px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.timeline-content .date {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Responsividade: Adaptação para Celulares e Tablets menores */
+@media screen and (max-width: 768px) {
+    /* Move a linha para a esquerda */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    /* Faz os itens ocuparem 100% da tela */
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    /* Corrige a posição dos círculos */
+    .timeline-item::after {
+        left: 21px;
+    }
+    
+    /* Garante que o lado direito também comece do início na tela pequena */
+    .right {
+        left: 0%;
+    }
+}
+/* --- ESTILO DOS CARDS DE PROJETOS --- */
+.projeto-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.projeto-card .icon-wrapper {
+    background: rgba(39, 174, 96, 0.1); /* Verde bem clarinho de fundo */
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background 0.3s ease;
+}
+
+.projeto-card:hover .icon-wrapper {
+    background: rgba(39, 174, 96, 0.2); /* Fica um pouco mais forte no hover */
+}
